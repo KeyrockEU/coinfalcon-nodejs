@@ -1,9 +1,13 @@
 {
-  "name": "coinfalcon-nodejs",
+  "name": "@keyrock/coinfalcon-nodejs",
   "version": "0.1.0",
   "description": "A complete API & WebSocket library for CoinFalcon.",
   "main": "dist",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "prepublish": "yarn build",
     "build": "rimraf dist && babel src -d dist",
     "cover": "nyc ava",
     "lint": "eslint src/ test/",
